@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detect</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+        }
+        .backimg{
+            height: 100vh;
+            margin: 0;
+            background-image:url('https://pimg.daara.co.kr/kidd/photo/2022/11/04/thumbs/thumb_520390_1667560395_94.jpg'); 
+            background-size : cover;
+            opacity: 0.9;
+        }
+        a{
+            text-decoration-line: none;
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+        }
+        .menu1{
+            color: aliceblue;
+            padding: 10px;
+        }
+        #title{
+            color: aliceblue;
+            font-size: 80px;
+        }
+        #fileinp{
+            color: aliceblue;
+            border: 2px solid aliceblue;
+            width: 300px;
+            height: 100px;
+        }
+        .detect{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn{
+            color: aliceblue;
+            width: 150px;
+        }
+        #reset{
+            padding: 10px;
+        }
+        #detect1{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="backimg">
+    <nav class="menu">
+        <a id="mainname" href="/">
+            <img src="/static/img/dataflow1.jpg"
+            width="60px" height="60px">
+        </a>
+        <a class="menu1" href="/">
+            home
+        </a>
+        <a class="menu1" href={{url_for('detect')}}>
+            detect
+        </a>
+    </nav>
+    <form method="post" enctype="multipart/form-data"> 
+        <div class="detect">
+            <p id="title">
+                회로 패턴 검사
+            </p>
+            <input type="file" name="file" id="fileinp" multiple>
+            <div style="padding: 10px;">
+                <input type="reset" class="btn" id="reset" style="background-color: rgba(38,129,178,0.8);"/>
+                <button type="submit" class="btn" id="detect1" style="background-color: rgba(35,33,113,0.8);">검사하기</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
+</div>
+</body>
+</html>

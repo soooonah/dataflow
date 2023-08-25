@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataflow</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+        }
+        .backimg{
+            height: 100vh;
+            margin: 0;
+            background-image:url('https://pimg.daara.co.kr/kidd/photo/2022/11/04/thumbs/thumb_520390_1667560395_94.jpg'); 
+            background-size : cover;
+            opacity: 0.9;
+        }
+        a{
+            text-decoration-line: none;
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+        }
+        .menu1{
+            color: aliceblue;
+            padding: 10px;
+        }
+        .explan{
+            color: aliceblue;
+        }
+        #title{
+            font-size: 60px;
+        }
+        #explantitle{
+            font-size: 25px;
+        }
+        #dataflowex{
+            display: flex;
+        }
+        #exdt{
+            padding: 5px;
+            font-size: 15px;
+            color: aliceblue;
+        }
+        .team{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .teamlist{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            margin-right: 20px;
+        }
+        .teams{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: aliceblue;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="backimg">
+    <nav class="menu">
+        <a id="mainname" href="/">
+            <img src="/static/img/dataflow1.jpg"
+            width="60px" height="60px">
+        </a>
+        <a class="menu1" href="/">
+            home
+        </a>
+        <a class="menu1" href={{url_for('detect')}}>
+            detect
+        </a>
+    </nav>
+    <div class="explan">
+        <p id="title">
+            dataflow
+        </p>
+        <p id="explantitle">
+            반도체 불량 검출 프로그램을 만든 팀입니다.
+        </p>
+            프로젝트 설명
+        </p>
+    </div>
+    <div class="teams">
+        <div class="team">
+            <img src="/static/img/dataflow1.jpg"
+            width="60px" height="60px">
+            <p id="df">
+                dataflow
+            </p>
+        </div>
+        <div class="teamlist">
+            <p class="teamlist">
+                최정인<br>
+                손아<br>
+                김예슬<br>
+                한나영<br>
+                김나영
+            </p>
+            <p class="teamlist">
+                https://github.com/inie1004<br>
+                https://github.com/soooonah<br>
+                https://github.com/Yeseul1414<br>
+                https://github.com/hny00<br>
+                https://github.com/witerk<br>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

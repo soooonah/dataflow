@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수율</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+        }
+        .backimg{
+            height: 100vh;
+            margin: 0;
+            background-image:url('https://pimg.daara.co.kr/kidd/photo/2022/11/04/thumbs/thumb_520390_1667560395_94.jpg'); 
+            background-size : cover;
+            opacity: 0.9;
+        }
+        a{
+            text-decoration-line: none;
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+        }
+        .menu1{
+            color: aliceblue;
+            padding: 10px;
+        }
+        .dataframe{
+            text-align:center;
+            margin:0 auto; 
+            background-color: #47407ba8;
+            width: 600px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            height: auto;
+            color: white;
+        }
+        #suyul{
+            font-size: 60px;
+            margin:20px auto;
+            text-align:center;
+            background-color: #55568bba;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="backimg">
+        <nav class="menu">
+            <a id="mainname" href="/">
+                <img src="/static/img/dataflow1.jpg"
+                width="60px" height="60px">
+            </a>
+            <a class="menu1" href="/">
+                home
+            </a>
+            <a class="menu1" href={{url_for('detect')}}>
+                detect
+            </a>
+        </nav>
+        <div>
+            <div class="dataframe">
+                {% for table in tables %}
+                    <table>
+                        <thead>
+                           <h2> 전체 정보</h2>
+                        </thead>
+                        <tbody>
+                            {{ table|safe }}
+                        </tbody>
+                    </table>
+                {% endfor %}
+            </div>
+            <p id="suyul">수율 : {{suyul}}%</p>
+        </div>
+    </div>
+</body>
+</html>
